@@ -1,0 +1,24 @@
+@use 'config/root-variables';
+@use 'base/base';
+@use 'components/header';
+@use 'components/search-navbar';
+@use 'components/cards';
+@use 'components/hero';
+@use 'components/footer';
+@use 'components/breakpoints';
+
+.dol {
+    outline: red dashed;
+  }
+  
+  .blu {
+    background-color: rgba(0, 0, 255, 0.6);
+  }
+  
+  .red {
+    background-color: rgba(255, 0, 0, 0.6);
+  }
+  
+  .green {
+    background-color: rgba(0, 128, 0, 0.6);
+  }

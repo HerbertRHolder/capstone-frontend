@@ -1,0 +1,35 @@
+:root {
+    --header-height: 72px;
+    --header-wrapper-w: 95%;
+    --header-nav-width: 390px;
+    --header-nav-width_mob: 190px;
+    --header-nav-height: 100%;
+    --main-content-gap: 0rem;
+    --page-w: 70%;
+    --layer1: 100;
+    --font_mob:10px;
+    --card-padding_mob:3px;
+    --section-h_mob: 900px;
+  }
+  .responsive-height{
+    height: 150vh;
+  }
+  
+  .color-prime {
+    background-color: #000000;
+    color: #ffffff;
+  }
+  
+  .color-accent {
+    background-color: #ffffff;
+    color: #000000;
+  }
+  
+  .color-sub {
+    background-color: #282828;
+  }
+  .box-shadow_top{
+    width: 150%;
+    height: 100px;
+    box-shadow: -10px -10px 8px #000000;
+  }

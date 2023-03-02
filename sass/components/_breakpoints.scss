@@ -1,0 +1,35 @@
+@media screen and (max-width: 700px) {
+  
+    .responsive-height{
+      height: 100vh;
+    }
+    .header-wrapper figure a{
+      width: 50px !important;
+    }
+    .header-wrapper figure a h1 {
+      display: none;
+    }
+  
+    header nav {
+      display: none;
+    }
+    .crd-comment {
+      width: 40%;
+      font-size: var(--font_mob);
+      padding: var(--card-padding_mob);
+      z-index: var(--layer1);
+    }
+    main section {
+      height: var(--section-h_mob);
+      flex-direction: column;
+    }
+    main section .cont {
+      width: 100%;
+      gap: 9rem;
+    }
+  }
+  @media screen and (min-width: 700px) {
+    menu {
+      display: none !important;
+    }
+  }

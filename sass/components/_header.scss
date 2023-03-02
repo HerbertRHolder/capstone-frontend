@@ -16,6 +16,17 @@ header {
   .header-wrapper figure {
     width: 120px;
     height: fit-content;
+    a{
+      h1{
+        transition: all .5s ease;
+      }
+      // img:hover{
+      //   width: 40px !important;
+      // }
+      h1:hover{
+        font-size: 35px !important;
+      }
+    }
   }
   .header-wrapper figure a {
     text-decoration: none;

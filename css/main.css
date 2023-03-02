@@ -10,6 +10,7 @@
   --font_mob:10px;
   --card-padding_mob:3px;
   --section-h_mob: 900px;
+  --btn-submit: ;
 }
 
 .responsive-height {
@@ -114,10 +115,13 @@ section {
 
 .hero {
   min-height: 100vh;
+  background-image: url("../assets/img/plane-over-earth.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .input-cont {
-  width: 25%;
+  width: 15%;
 }
 
 header {
@@ -211,10 +215,23 @@ header menu {
   place-items: center;
 }
 
+button {
+  border: none;
+  box-shadow: none;
+}
+
+.btn-submit {
+  padding: 1rem;
+}
+
 .search-flight-cont {
   width: 80%;
   height: 72px;
   justify-self: center;
+  gap: 2rem;
+}
+.search-flight-cont .input-cont {
+  height: 62px;
 }
 
 .crd-comment {

@@ -50,6 +50,7 @@
     width: 100%;
     height: 700px;
     display: flex;
+    
   }
   main section .cont {
     width: 50%;
@@ -71,10 +72,14 @@
   
   .hero{
     min-height: 100vh;
+    background-image: url("../assets/img/plane-over-earth.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
     
   }
 
   .input-cont{
-    width: 25%;
+    width: 15%;
+    
   }
   

@@ -1,9 +1,9 @@
 (function(){
     "use strict"
-    let form = document.getElementById("form");
-    form.addEventListener("submit", (e)=>{
-        e.preventDefault();
-    })
+    // let form = document.getElementById("form");
+    // form.addEventListener("submit", (e)=>{
+    //     e.preventDefault();
+    // })
     const observer = new IntersectionObserver((entries)=>{
         entries.forEach(entry => {
             if (entry.isIntersecting){

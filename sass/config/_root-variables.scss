@@ -1,7 +1,9 @@
 :root {
+    --body-gap: 1rem;
+    --font-bolds_desks: 1.2rem;
     --header-height: 72px;
     --header-wrapper-w: 95%;
-    --header-nav-width: 390px;
+    --header-nav-width: 550px;
     --header-nav-width_mob: 190px;
     --header-nav-height: 100%;
     --main-content-gap: 0rem;
@@ -10,6 +12,7 @@
     --font_mob:10px;
     --card-padding_mob:3px;
     --section-h_mob: 900px;
+    --margin-top_tickets: 3rem;
     --btn-submit: 
   }
   .responsive-height{

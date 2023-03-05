@@ -1,7 +1,9 @@
 :root {
+  --body-gap: 1rem;
+  --font-bolds_desks: 1.2rem;
   --header-height: 72px;
   --header-wrapper-w: 95%;
-  --header-nav-width: 390px;
+  --header-nav-width: 550px;
   --header-nav-width_mob: 190px;
   --header-nav-height: 100%;
   --main-content-gap: 0rem;
@@ -10,6 +12,7 @@
   --font_mob:10px;
   --card-padding_mob:3px;
   --section-h_mob: 900px;
+  --margin-top_tickets: 3rem;
   --btn-submit: ;
 }
 
@@ -63,16 +66,19 @@
   box-sizing: border-box;
 }
 
+.responsive-font {
+  font-size: var(--font-bolds_desks);
+}
+
 /* ++++++++++ Header , footer, body, main +++++++++++++++++++++++++++++++++++ */
 body {
-  background-color: var(--prime);
   width: 100%;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  gap: 0rem;
+  gap: var(--body-gap);
 }
 
 .offcanvas-body nav ul {
@@ -89,7 +95,7 @@ body {
 main {
   position: relative;
   width: 100%;
-  min-height: 500px;
+  min-height: fit-content;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -98,15 +104,8 @@ main {
   gap: var(--main-content-gap);
 }
 
-main section {
-  position: relative;
-  width: 100%;
-  height: 700px;
-  display: flex;
-}
-
 main section .cont {
-  width: 50%;
+  width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -120,11 +119,16 @@ label {
 }
 
 section {
-  height: 300px;
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 
 .hero {
+  width: 100%;
   min-height: 100vh;
   background-image: url("../assets/img/plane-over-earth.jpeg");
   background-repeat: no-repeat;
@@ -133,6 +137,15 @@ section {
 
 .input-cont {
   width: 15%;
+}
+
+.payment-cont {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 header {
@@ -207,6 +220,7 @@ header nav ul a li button {
   padding: 1rem;
   border: none;
   border-radius: 0.5rem;
+  background-color: #ffffff;
 }
 
 header nav ul a li:hover {
@@ -235,10 +249,35 @@ header menu {
 button {
   border: none;
   box-shadow: none;
+  background-color: transparent;
+  transition: all 0.1s ease;
+}
+
+button:hover {
+  outline: #b1b1b1 solid;
 }
 
 .btn-submit {
   padding: 1rem;
+}
+
+.btn-bag {
+  width: fit-content;
+  height: fit-content;
+  padding: 0.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 0.8rem;
+}
+
+.btn-buy {
+  display: flex;
+  gap: 0.5rem;
+  color: #000000;
+  padding: 1rem;
+  border: solid 1px #000000;
+  background: -webkit-linear-gradient(45deg, hsl(33deg, 100%, 53%) 3%, hsl(58deg, 100%, 68%) 100%);
 }
 
 .search-flight-cont {
@@ -251,13 +290,51 @@ button {
   height: 62px;
 }
 
-.crd-comment {
+/* Bootstrap styles*/
+.panel {
+  width: 70%;
+  margin: 2em auto;
+}
+
+.panel-body {
+  width: 90%;
+  margin: 2em auto;
+}
+
+.helper-text {
+  color: #e93143;
+  font-size: 12px;
+  margin-top: 5px;
+  height: 12px;
+  display: block;
+}
+
+.helper-text-green {
+  color: green;
+}
+
+/* Hosted Payment Fields styles*/
+.hosted-field-focus {
+  border: 1px solid #66afe9;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+}
+
+.hosted-field-invalid {
+  border: 1px solid #e93143;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(233, 49, 67, 0.8);
+}
+
+.hosted-field-valid {
+  border: 1px solid #14ba57;
+}
+
+.card-comment {
   width: 400px;
   min-height: fit-content;
   padding: 1rem;
 }
 
-.crd-glass {
+.card-glass {
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
@@ -265,20 +342,80 @@ button {
   border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
-.crd-paper1 {
+.card-paper1 {
   box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }
 
-.crd-paper2 {
+.card-paper2 {
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
 
-.crd-paper3 {
+.card-paper3 {
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
-.crd-paper4 {
+.card-paper4 {
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.ticket {
+  margin-top: var(--margin-top_tickets);
+  width: 80%;
+  height: 300px;
+  border: 3px solid rgba(0, 0, 0, 0.18);
+  display: flex;
+}
+.ticket .info-cont {
+  width: 70%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid #000000;
+}
+.ticket .info-cont .info-row {
+  margin-top: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  width: 100%;
+  height: 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.ticket .info-cont .info-row .info-column {
+  width: fit-content;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.ticket .info-cont .info-row .info-column img {
+  width: 50px;
+}
+.ticket .buy-deal-cont {
+  width: 30%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.ticket .buy-deal-cont .buy-deal-row {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.tickets-cont {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 footer {
@@ -310,8 +447,37 @@ footer {
     z-index: var(--layer1);
   }
   main section {
-    height: var(--section-h_mob);
+    min-height: var(--section-h_mob);
+    justify-content: flex-start;
     flex-direction: column;
+  }
+  .ticket {
+    flex-direction: column;
+  }
+  .ticket .info-cont {
+    width: 100%;
+    height: 100%;
+    border-right: none;
+  }
+  .ticket .info-cont .info-row .info-column {
+    width: fit-content;
+    height: 100%;
+  }
+  .ticket .info-cont .info-row .info-column img {
+    display: none;
+  }
+  .ticket .buy-deal-cont {
+    width: 100%;
+    height: 3rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .ticket .buy-deal-cont .buy-deal-row {
+    width: fit-content;
+    height: 100%;
+    display: flex;
+    align-items: center;
   }
   main section .cont {
     width: 100%;

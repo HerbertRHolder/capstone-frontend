@@ -3,10 +3,19 @@
 @use 'components/header';
 @use 'components/buttons';
 @use 'components/search-navbar';
+@use 'components/payment-style';
 @use 'components/cards';
+@use 'components/containers';
 @use 'components/hero';
 @use 'components/footer';
 @use 'components/breakpoints';
+
+
+
+@use 'purchase_page/components/purchase_section';
+
+
+
 
 .dol {
     outline: red dashed;

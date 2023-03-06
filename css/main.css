@@ -1,5 +1,5 @@
 :root {
-  --body-gap: 1rem;
+  --body-gap: 0rem;
   --font-bolds_desks: 1.2rem;
   --header-height: 72px;
   --header-wrapper-w: 95%;
@@ -93,6 +93,7 @@ body {
 }
 
 main {
+  padding-bottom: 2rem;
   position: relative;
   width: 100%;
   min-height: fit-content;
@@ -280,14 +281,50 @@ button:hover {
   background: -webkit-linear-gradient(45deg, hsl(33deg, 100%, 53%) 3%, hsl(58deg, 100%, 68%) 100%);
 }
 
-.search-flight-cont {
-  width: 80%;
-  height: 72px;
-  justify-self: center;
-  gap: 2rem;
+.btn-trip-type, .btn-trip-type:hover {
+  width: fit-content;
+  background-color: transparent;
+  border: none;
 }
-.search-flight-cont .input-cont {
-  height: 62px;
+
+select {
+  background-color: transparent;
+  color: #ffffff;
+  padding: 0.5rem;
+}
+
+.search-flight-cont {
+  border-top: 0.3px gray solid;
+  width: 100%;
+  min-height: 100px;
+  justify-content: center;
+  gap: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.search-flight-cont .drop-tabs {
+  margin-top: 0.2rem;
+  width: 90%;
+  height: fit-content;
+  display: flex;
+  gap: 1rem;
+}
+.search-flight-cont .drop-tabs .dropdown-toggle {
+  padding: 0.2;
+}
+.search-flight-cont .drop-tabs input[type=number] {
+  width: 50px;
+  padding: 0;
+  color: #ffffff;
+  background-color: #000000;
+  border: 1px solid #ffffff;
+}
+.search-flight-cont .drop-tabs ::placeholder {
+  color: #ffffff;
+}
+.search-flight-cont .drop-tabs .searchbar-w {
+  width: 200px !important;
 }
 
 /* Bootstrap styles*/

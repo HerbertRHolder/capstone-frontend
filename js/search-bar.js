@@ -4,7 +4,8 @@
     let tripType = document.getElementById("trip-type")
     let round = document.getElementById("round")
     let oneway = document.getElementById("oneway")
-    let container = document.getElementById("flight-search")
+    let submit = document.getElementById("form-submit")
+
     let dates = document.getElementById("dates")
     
     let div = document.createElement("div");
@@ -29,7 +30,7 @@
     tripType.addEventListener("change", ()=>{
        console.log(tripType.value)
        if (tripType.value == "round"){
-            dates.appendChild(div)
+            dates.insertBefore(div,submit)
        }else{
         if (tripType.value == "oneway")
         dates.removeChild(div)

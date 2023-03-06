@@ -99,7 +99,7 @@ main {
   min-height: fit-content;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
   flex: 1;
   gap: var(--main-content-gap);
@@ -259,7 +259,9 @@ button:hover {
 }
 
 .btn-submit {
-  padding: 1rem;
+  padding: 0.5rem;
+  background-color: #ffffff;
+  color: #000000;
 }
 
 .btn-bag {
@@ -428,6 +430,9 @@ select {
 }
 .ticket .info-cont .info-row .info-column img {
   width: 50px;
+}
+.ticket .info-cont .info-row .info-column img::selection {
+  background-color: transparent;
 }
 .ticket .buy-deal-cont {
   width: 30%;

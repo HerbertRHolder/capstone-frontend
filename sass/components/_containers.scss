@@ -9,7 +9,97 @@
     justify-content: center;
     align-items: center;
   }
+  main section .cont {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 
+  .cont-500{
+    width: 100%;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .cont-grow{
+    width: 100%;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .form-wrapper{
+    width: 90%;
+    min-height: 100%;
+    border-radius: 1rem ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .ui-wrapper{
+    width: 80%;
+    height: 90%;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+/* Uses bootstrap-material-design - https://fezvrasta.github.io/bootstrap-material-design */
+
+.panel {
+  width: 80%;
+  margin: 2em auto;
+}
+
+.panel-body {
+  width: 90%;
+  margin: 2em auto;
+}
+
+body {
+  font-size: 15px;
+}
+
+label {
+  font-weight: 400;
+}
+
+.helper-text {
+  color: #E91E63; 
+  font-size: 12px;
+  margin-top: 5px;
+  height: 12px;
+  display: block;
+}
+
+.helper-text-green {
+  color: green;
+}
+
+
+/* Hosted Payment Fields styles*/
+.hosted-field-focus { 
+  outline: none;
+  background-image: linear-gradient(#009688, #009688), linear-gradient(#d2d2d2, #d2d2d2);
+  animation: input-highlight 0.5s forwards;
+  box-shadow: none;
+  background-size: 0 2px, 100% 1px;
+}
+
+
+
+
+
+  
   @media screen and (max-width:576px) {
 
     

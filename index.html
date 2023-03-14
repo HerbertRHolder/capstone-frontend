@@ -13,6 +13,100 @@
     <!-- <link rel="stylesheet" href="css/style.css"> -->
     <link rel="stylesheet" href="css/main.css">
 </head>
+<style>
+    .phone-cont {
+        z-index: 1;
+        left: 55%;
+        margin-top: 2rem;
+        width: 208px;
+        height: 418px;
+        border-radius: 2rem;
+        /* outline:dashed blue; */
+        display: flex;
+        padding-top: .1rem;
+        padding-left: .2rem;
+        justify-content: center;
+        cursor: pointer;
+        /* padding-right: 6rem; */
+        background-image: url("assets/img/White_Matte-removebg-preview_magic.png");
+        background-position: center;
+        background-size: 700px;
+        background-repeat: no-repeat;
+        overflow: hidden;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        justify-content: center;
+        /* flex-direction: */
+    }
+    h1{
+        z-index: 5;
+    }
+
+    .phone-overlay {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: .5rem;
+        box-sizing: border-box;
+        padding: 1rem;
+        align-items: center;
+        opacity: 0%;
+        z-index: 10;
+        width: 170px;
+        height: 60px;
+        border-radius: .5rem;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        background-color: #0590ee;
+    }
+
+    .phone-overlay p {
+        text-align: center;
+    }
+
+    .msg {
+        transition: all .7s ease;
+    }
+
+    .msg {
+        margin-top: 1.7rem;
+        opacity: 100%;
+    }
+
+    .hide-msg {
+        transition: all .7s ease;
+    }
+
+    .hide-msg {
+        margin-top: 1.2rem;
+        opacity: 0%;
+    }
+
+    .phone-img {
+        position: relative;
+        transform: translateX(-35%);
+        z-index: 1;
+        /* float: left; */
+        outline: red dashed;
+    }
+
+    .phone-profile_cont{
+        margin-top: 2rem;
+        border-radius: 50%;
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        background-color: #ffffff;
+        background-image: url("assets/img/pinkprettypony.jpeg");
+        background-size: cover;
+        background-position: center;
+    }
+    .tiny-font {
+        font-size: 10px;
+    }
+    .tiny-title {
+        margin-top: 4.5rem;
+    }
+</style>
 
 
 
@@ -64,12 +158,6 @@
                     <a href="about.html">
                         <li class="text-light">Our Mission</li>
                     </a>
-                    <a href="#">
-                        <li class="text-light">Trips</li>
-                    </a>
-                    <a href="#">
-                        <li class="text-light">Wishlist</li>
-                    </a>
                     <a href="login.html">
                         <li class="text-light"><button>Login</button></li>
                     </a>
@@ -87,59 +175,75 @@
 
     </header>
     <main class="color-accent hero">
-        <section>
+        <section class="search-bar_section ">
             <form id="form" class="color-prime 
         search-flight-cont" action="#" method="POST">
-            <div class="drop-tabs justify-content-center
+                <div class="drop-tabs justify-content-center
             justify-content-md-start">
 
-                
-                  <!-- <label for="passenger">passenger</label> -->
-                  <select name="trip type" id="trip-type">
-                      <option id="oneway"value="oneway">One Way</option>
-                      <option id="round"value="round">Round trip</option>
+
+                    <!-- <label for="passenger">passenger</label> -->
+                    <select name="trip type" id="trip-type">
+                        <option id="oneway" value="oneway">One Way</option>
+                        <option id="round" value="round">Round trip</option>
                     </select>
-                  <select name="passenger" id="passenger">
-                    <option value="Adult">Adult</option>
-                    <option value="Child">Child</option>
-                  </select>
-                  <select  name="ecom" id="ecom">
-                    <option value="economy">Economy</option>
-                    <option value="Business">Business</option>
-                  </select>
-                  <label for="lugguge">Bags</label>
-                  <input type="number" placeholder="0" min="0" name="lugguge">
-                  
+                    <select name="passenger" id="passenger">
+                        <option value="Adult">Adult</option>
+                        <option value="Child">Child</option>
+                    </select>
+                    <select name="ecom" id="ecom">
+                        <option value="economy">Economy</option>
+                        <option value="Business">Business</option>
+                    </select>
+                    <label for="lugguge">Bags</label>
+                    <input type="number" placeholder="0" min="0" name="lugguge">
+
                 </div>
-                
+
                 <div class="drop-tabs flex-wrap justify-content-center
                 justify-content-md-start" id="flight-search">
                     <div class="input-group mb-3 searchbar-w">
                         <span class="input-group-text" id="inputGroup-sizing-default">From</span>
-                        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Dallas">
-                      </div>
+                        <input type="text" class="form-control" aria-label="Sizing example input"
+                            aria-describedby="inputGroup-sizing-default" placeholder="Dallas">
+                    </div>
                     <div class="input-group mb-3 searchbar-w">
                         <span class="input-group-text" id="inputGroup-sizing-default">To</span>
-                        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="San Antonio">
-                      </div>
-                      <div class="fit-content d-flex gap-3 flex-wrap align-items-center justify-content-center" id="dates">
+                        <input type="text" class="form-control" aria-label="Sizing example input"
+                            aria-describedby="inputGroup-sizing-default" placeholder="San Antonio">
+                    </div>
+                    <div class="fit-content d-flex gap-3 flex-wrap align-items-center justify-content-center"
+                        id="dates">
                         <div class="input-group mb-3 w-25 searchbar-w">
                             <span class="input-group-text" id="inputGroup-sizing-default">Date</span>
-                           <input 
-                           class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"
-                           type="date">
-                          </div>
-                      </div>
-                     
-              </div>
+                            <input class="form-control" aria-label="Sizing example input"
+                                aria-describedby="inputGroup-sizing-default" type="date">
+                        </div>
+                    </div>
+
+                </div>
             </form>
+        </section>
+        <section class="container-fluid cont-500 d-flex dol justify-content-center align-items-center position-relative">
+            <h1 class="fs-1 text-white ">Book your flight, pack your bags, and let us do the rest!</h1>
+            
+            <div class="phone-cont d-flex position-absolute" id="phone">
+                <div class="phone-overlay" id="msg">
+                    <p class="tiny-font">Brony sent a message</p>
+                   
+                    <p>Let's Travel 😌</p>
+                </div>
+                <div class="phone-profile_cont"></div>
+                <div class="fs-6 position-absolute tiny-title">Brony</div>
+                <!-- <div class="rounded-circle w-25 h-25 bg-black position-absolute"></div> -->
+            </div>
         </section>
 
 
 
     </main>
     <footer class="color-prime flex-column">
-                    
+
 
         footer
     </footer>
@@ -150,6 +254,24 @@
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/effects.js"></script>
     <script src="js/search-bar.js"></script>
+    <script>
+        const phone = document.getElementById('phone');
+        const msg = document.getElementById('msg');
+       
+        
+        phone.onmouseover = function () { showMsg() };
+        phone.onmouseout = function () { hideMsg() };
+
+        function showMsg() {
+            msg.classList.remove('hide-msg');
+            msg.classList.add('msg');
+        };
+
+        function hideMsg() {
+            msg.classList.remove('msg');
+            msg.classList.add('hide-msg')
+        }
+    </script>
 </body>
 
 </html>

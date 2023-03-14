@@ -131,9 +131,10 @@ section {
 .hero {
   width: 100%;
   min-height: 100vh;
-  background-image: url("../assets/img/plane-over-earth.jpeg");
+  background-image: url("../assets/img/beach.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center 70%;
 }
 
 .input-cont {
@@ -506,46 +507,11 @@ main section .cont {
   align-items: center;
 }
 
+.search-bar_section {
+  height: fit-content;
+}
+
 /* Uses bootstrap-material-design - https://fezvrasta.github.io/bootstrap-material-design */
-.panel {
-  width: 80%;
-  margin: 2em auto;
-}
-
-.panel-body {
-  width: 90%;
-  margin: 2em auto;
-}
-
-body {
-  font-size: 15px;
-}
-
-label {
-  font-weight: 400;
-}
-
-.helper-text {
-  color: #E91E63;
-  font-size: 12px;
-  margin-top: 5px;
-  height: 12px;
-  display: block;
-}
-
-.helper-text-green {
-  color: green;
-}
-
-/* Hosted Payment Fields styles*/
-.hosted-field-focus {
-  outline: none;
-  background-image: linear-gradient(#009688, #009688), linear-gradient(#d2d2d2, #d2d2d2);
-  animation: input-highlight 0.5s forwards;
-  box-shadow: none;
-  background-size: 0 2px, 100% 1px;
-}
-
 footer {
   width: 100%;
   height: 300px;
@@ -575,7 +541,7 @@ footer {
     z-index: var(--layer1);
   }
   main section {
-    min-height: var(--section-h_mob);
+    min-height: fit-content;
     justify-content: flex-start;
     flex-direction: column;
   }

@@ -23,13 +23,11 @@
     div.appendChild(input);
 
 
-    console.log(div);
 
 
 
     tripType.addEventListener("change", ()=>{
-       console.log(tripType.value)
-       if (tripType.value == "round"){
+       if (tripType.value == "roundtrip"){
             dates.insertBefore(div,submit)
        }else{
         if (tripType.value == "oneway")
@@ -40,7 +38,6 @@
        
    })
    tripType.addEventListener("click",(e)=>{
-    console.log(tripType.value);
    })
 
 

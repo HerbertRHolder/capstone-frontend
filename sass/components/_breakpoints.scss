@@ -27,7 +27,7 @@
   }
 
   main section {
-    min-height: var(--section-h_mob);
+    min-height: fit-content;
     justify-content: flex-start;
     flex-direction: column;
   }
